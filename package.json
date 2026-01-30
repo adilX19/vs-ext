@@ -1,6 +1,6 @@
 {
-  "name": "markdown-downloader",
-  "displayName": "Markdown Downloader",
+  "name": "adx-markdown-downloader",
+  "displayName": "ADX Markdown Downloader",
   "publisher": "AdilSaleem",
   "repository": {
     "type": "git",
@@ -30,23 +30,23 @@
   "contributes": {
     "commands": [
       {
-        "command": "markdown-downloader.downloadPdf",
+        "command": "adx-markdown-downloader.downloadPdf",
         "title": "Download as PDF"
       },
       {
-        "command": "markdown-downloader.downloadDocx",
+        "command": "adx-markdown-downloader.downloadDocx",
         "title": "Download as Word"
       }
     ],
     "menus": {
       "editor/title": [
         {
-          "command": "markdown-downloader.downloadPdf",
+          "command": "adx-markdown-downloader.downloadPdf",
           "when": "resourceLangId == markdown",
           "group": "navigation"
         },
         {
-          "command": "markdown-downloader.downloadDocx",
+          "command": "adx-markdown-downloader.downloadDocx",
           "when": "resourceLangId == markdown",
           "group": "navigation"
         }
