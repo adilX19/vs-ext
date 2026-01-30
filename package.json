@@ -1,0 +1,59 @@
+{
+  "name": "markdown-downloader",
+  "displayName": "Markdown Downloader",
+  "description": "Download Markdown as PDF or Word",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:markdown"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "markdown-downloader.downloadPdf",
+        "title": "Download as PDF"
+      },
+      {
+        "command": "markdown-downloader.downloadDocx",
+        "title": "Download as Word"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "markdown-downloader.downloadPdf",
+          "when": "resourceLangId == markdown",
+          "group": "navigation"
+        },
+        {
+          "command": "markdown-downloader.downloadDocx",
+          "when": "resourceLangId == markdown",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "@types/node": "^16.11.7",
+    "@types/markdown-it": "^12.2.3",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "markdown-it": "^13.0.1",
+    "html-to-docx": "^1.8.0",
+    "puppeteer-core": "^19.7.5",
+    "chrome-launcher": "^0.15.1"
+  }
+}
