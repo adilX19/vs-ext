@@ -2,6 +2,10 @@
   "name": "markdown-downloader",
   "displayName": "Markdown Downloader",
   "publisher": "AdilSaleem",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adilX19/vs-ext.git"
+  },
   "description": "Download Markdown as PDF or Word",
   "version": "0.0.1",
   "engines": {
@@ -13,7 +17,7 @@
   "activationEvents": [
     "onLanguage:markdown"
   ],
-  "main": "./out/extension.js",
+  "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
@@ -41,20 +45,33 @@
     }
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./"
+    "vscode:prepublish": "npm run package",
+    "compile": "npm run check-types && npm run lint && node esbuild.js",
+    "watch": "npm-run-all -p watch:*",
+    "watch:esbuild": "node esbuild.js --watch",
+    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
+    "package": "npm run check-types && node esbuild.js --production",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint src --ext ts"
   },
   "devDependencies": {
-    "@types/vscode": "^1.80.0",
-    "@types/node": "^16.11.7",
+    "@types/eslint": "^9.6.1",
     "@types/markdown-it": "^12.2.3",
-    "typescript": "^4.9.4"
+    "@types/node": "^16.11.7",
+    "@types/vscode": "^1.80.0",
+    "@typescript-eslint/eslint-plugin": "^8.54.0",
+    "@typescript-eslint/parser": "^8.54.0",
+    "esbuild": "^0.27.2",
+    "eslint": "^9.39.2",
+    "globals": "^17.2.0",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^4.9.4",
+    "typescript-eslint": "^8.54.0"
   },
   "dependencies": {
-    "markdown-it": "^13.0.1",
+    "chrome-launcher": "^0.15.1",
     "html-to-docx": "^1.8.0",
-    "puppeteer-core": "^19.7.5",
-    "chrome-launcher": "^0.15.1"
+    "markdown-it": "^13.0.1",
+    "puppeteer-core": "^19.7.5"
   }
 }
