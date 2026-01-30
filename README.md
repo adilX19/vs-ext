@@ -4,10 +4,11 @@ Export your Markdown files to formatted PDF or Word (.docx) documents with a sin
 
 ## Features
 
-- **Convert to PDF**: Generates high-quality PDFs using your system's browser engine.
-- **Convert to Word**: Creates editable `.docx` files.
-- **GitHub Style**: Applies standard GitHub markdown styling to the exported documents.
-- **Easy Access**: Download buttons available right in the editor title bar.
+- **One-Click Export**: Instantly convert your current Markdown file.
+- **High-Fidelity PDF**: Uses your local Chrome/Edge browser for perfect rendering, ensuring your PDF looks exactly like the preview.
+- **Editable Word Docs**: Generates `.docx` files that are easy to edit and share.
+- **Smart Styling**: Automatic GitHub-flavored styling for professional results.
+- **Zero Config**: Works out of the box with no complex setup.
 
 ## Requirements
 
