@@ -1,0 +1,10 @@
+.vscode/**
+.vscode-test/**
+src/**
+.gitignore
+tsconfig.json
+vsc-extension-quickstart.md
+webpack.config.js
+**/*.map
+test-conversion.ts
+out/test-conversion.js

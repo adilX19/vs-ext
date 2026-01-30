@@ -1,6 +1,7 @@
 {
   "name": "markdown-downloader",
   "displayName": "Markdown Downloader",
+  "publisher": "AdilSaleem",
   "description": "Download Markdown as PDF or Word",
   "version": "0.0.1",
   "engines": {
