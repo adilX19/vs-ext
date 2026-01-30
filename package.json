@@ -7,13 +7,22 @@
     "url": "https://github.com/adilX19/vs-ext.git"
   },
   "description": "Export your Markdown files to professional PDF or Word (.docx) documents directly from VS Code. Supports GitHub styling, tables, images, and code blocks.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.80.0"
   },
   "categories": [
     "Other"
   ],
+  "keywords": [
+    "markdown",
+    "pdf",
+    "word",
+    "converter",
+    "export",
+    "print"
+  ],
+  "icon": "icon.png",
   "activationEvents": [
     "onLanguage:markdown"
   ],
